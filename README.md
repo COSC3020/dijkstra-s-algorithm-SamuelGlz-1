@@ -24,3 +24,5 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+The big $\Theta$ for my implementation is $\Theta$ (|V|x|E|). This is because the code grantees that we will check from every vertex, and every vertex attached to it. In my code the first loop will go through a certain amount of vertices, but is not garanteed to look at all of them, checking all of their edges. At the end there is a for loop that makes sure that all the vertices have been tried. There is a check in the beginning skipping a vertex if it has been visited, ensuring that we pass over every vertex without extra work.
