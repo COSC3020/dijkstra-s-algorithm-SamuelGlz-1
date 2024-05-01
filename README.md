@@ -25,4 +25,6 @@ inefficient.
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
-The big $\Theta$ for my implementation is $\Theta$ (|V|x|E|). This is because the code grantees that we will check from every vertex, and every vertex attached to it. In my code the first loop will go through a certain amount of vertices, but is not garanteed to look at all of them, checking all of their edges. At the end there is a for loop that makes sure that all the vertices have been tried. There is a check in the beginning skipping a vertex if it has been visited, ensuring that we pass over every vertex without extra work.
+The big $\Theta$ for my implementation is $\Theta$ (|V|+|E|). 
+
+I corrected the analysis. My first for loop will check every edge to the vertex and calculate the distances. This then leads to the second for loop that will make the program run through all the verteces attached to the 'current vertex', this garantees that the program will run through all V and their matching E. Since I am using an adjacency matrix the complexity to iterate through all the verteces and edges is $\Theta$ (|V|+|E|).

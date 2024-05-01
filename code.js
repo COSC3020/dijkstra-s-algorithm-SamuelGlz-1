@@ -36,14 +36,7 @@ function dijkstra(graph, sourceNode) {
             if (temp < distances[Object.keys(graph[currentVertex])[i]]){
                 distances[Object.keys(graph[currentVertex])[i]] = temp;
             }
-
-            if (Object.values(graph[currentVertex])[i] < shortestDis) {
-                shortestDis = Object.values(graph[currentVertex])[i];
-                shortestDisID = Object.keys(graph[currentVertex])[i]
-            }
         }
-
-        dijkstraInside(graph, shortestDisID)
 
         for(i = 0; i < Object.keys(graph[currentVertex]).length; i++){
             dijkstraInside(graph, Object.keys(graph[currentVertex])[i])
