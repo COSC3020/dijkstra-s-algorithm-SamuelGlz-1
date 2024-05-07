@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2Wy-Iis-)
 # Dijkstra's Algorithm
 
 Recall the pseudocode for Dijkstra's algorithm:
@@ -23,3 +24,8 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+The big $\Theta$ for my implementation is $\Theta$ $(|V|^2)$. 
+
+I corrected the analysis. So like the slides say, it takes O|V| to assign Infinity to every vertex. Then in the code we see that the for loop at the bottom goes through all the unvisited vetrices, which is $\Theta$|V|. This is while the inner for loop checks the connected vertex with the lowest distance $\Theta$(|V|). Finally we assign a distance based on the minimum calculated, this is $\Theta$(1) (assigning a value to temp) and $\Theta$s(1) checking to see id the value is lower. 
+Overall our runtime would be $\Theta$(|V|+|V|(|V|+|V| + 2)) = |V| + $|V|^2 + |V|^2 + 2|V|$ which asymptotically is equal to $\Theta$ $(|V|^2)$
